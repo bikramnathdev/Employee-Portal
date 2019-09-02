@@ -1,0 +1,67 @@
+<div class="ui container">
+  <h1 class="ui header center aligned">Add Employees</h1>
+</div>
+<div class="ui container segment">
+  <div class="ui container center aligned">
+    <form #employeeForm="ngForm" (ngSubmit)="onSubmit()">
+    <div class="ui form">
+      <div class="ui two column grid">
+        <div class="row">
+          <div class="column">
+            <div class="field">
+              <label>First name</label>
+              <input type="text" placeholder="First Name" name="firstname" [(ngModel)]="employee.firstname" required />
+            </div>
+          </div>
+          <div class="column">
+            <div class="field">
+              <label>Last name</label>
+              <input type="text" placeholder="Last Name" name="lastname" [(ngModel)]="employee.lastname" required />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ui three column grid">
+        <div class="row">
+          <div class="column">
+            <div class="field">
+              <label>Date Of Birth</label>
+              <input type="date" placeholder="Date Of Birth" name="dob" [(ngModel)]="employee.dob" required />
+            </div>
+          </div>
+          <div class="column">
+            <div class="field">
+                <label>Gender</label>
+              <select class="ui dropdown" name="gender" [(ngModel)]="employee.gender" required>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+              </select>
+            </div>
+          </div>
+          <div class="column">
+            <div class="field">
+              <label>Department</label>
+              <input type="text" placeholder="Department" name="department" [(ngModel)]="employee.department" required />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ui three column grid">
+        <div class="row">
+          <div class="column"></div>
+          <div class="column"></div>
+          <div class="column">
+            <a routerLink="/"><button class="ui button">
+              Discard
+            </button>
+          </a>
+            <button class="ui primary button">
+              Save
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+  </div>
+</div>

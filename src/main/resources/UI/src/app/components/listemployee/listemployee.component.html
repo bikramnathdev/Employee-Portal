@@ -1,0 +1,28 @@
+<div class="ui container">
+    <h1 class="ui header center aligned">All Employees</h1>
+</div>
+<div class="ui container">
+  <a routerLink="/addemployee"><div class="ui right floated small primary labeled icon button">
+        <i class="user icon"></i> Add User
+      </div></a>
+</div>
+
+<div class="ui container">
+    <table class="ui celled table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>DOB</th>
+            <th>Gender</th>
+            <th>Department</th>
+        </tr></thead>
+        <tbody *ngFor="let employee of employees$">
+          <tr>
+            <td data-label="Name">{{ employee.firstname }} {{employee.lastname}}</td>
+            <td data-label="DOB">{{ employee.dob }}</td>
+            <td data-label="Gender">{{ employee.gender }}</td>
+            <td data-label="Department">{{ employee.department }}</td>
+          </tr>
+        </tbody>
+      </table>
+</div>
